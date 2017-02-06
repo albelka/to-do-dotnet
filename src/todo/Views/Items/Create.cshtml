@@ -12,6 +12,8 @@
     {
         @Html.LabelFor(model => model.Description)
         @Html.TextBoxFor(model => model.Description)
+        @Html.LabelFor(model => model.Done)
+        @Html.CheckBoxFor(model => model.Done)
         <input type="submit" value="Add new task">
     }
     <p>@Html.ActionLink("Back to list", "Index")</p>

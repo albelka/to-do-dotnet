@@ -14,7 +14,10 @@
 
         @Html.LabelFor(model => model.Description)
         @Html.EditorFor(model => model.Description)
-
-        <input type="submit" value="Save" />
+        <span>&nbsp;|&nbsp;</span>
+        @Html.LabelFor(model => model.Done)
+        @Html.CheckBoxFor(model => model.Done)
+        <br>
+        <input type="submit" value="Amphibians" />
     }
     <p>@Html.ActionLink("Back to list", "Index")</p>

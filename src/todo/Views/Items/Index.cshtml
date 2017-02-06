@@ -10,7 +10,17 @@
     <ul>
         @foreach (var listItem in Model)
         {
-            <li>@Html.DisplayFor(modelItem => listItem.Description) | @Html.ActionLink("Frogs", "Details", new { id = listItem.ItemId }) | @Html.ActionLink("Edit", "Edit", new { id = listItem.ItemId }) | @Html.ActionLink("Delete", "Delete", new { id = listItem.ItemId })</li>
+            <li>
+                @Html.DisplayFor(modelItem => listItem.Description) | @Html.ActionLink("Frogs", "Details", new { id = listItem.ItemId }) | @Html.ActionLink("Edit", "Edit", new { id = listItem.ItemId }) | @Html.ActionLink("Delete", "Delete", new { id = listItem.ItemId })
+                @if (listItem.Done)
+                {
+                    <span>This task is complete</span>
+                }
+                else
+                {
+                    <span>This task is not complete</span>
+                }
+            </li>
         }
     </ul>
 
