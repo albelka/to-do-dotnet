@@ -1,15 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "To Do List";
+    ViewData["Title"] = "Item - Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model ToDoList.Models.Item
 
 
-    <h2>Details</h2>
-    <hr />
-    @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
-    <br>
-    @Html.ActionLink("Edit", "Edit", new {id = Model.ItemId})
-    <br>
-    @Html.ActionLink("Back to index", "Index")
+<h2>Details</h2>
+<hr />
+<p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
+<p>@Html.DisplayNameFor(model => model.Category.Name): @Html.DisplayFor(model => model.Category.Name)</p>
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.ItemId }) | @Html.ActionLink("Back to index", "Index")</p>
