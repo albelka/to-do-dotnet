@@ -13,7 +13,7 @@ namespace ToDoList.Models
     {
         public Category()
         {
-            this.Items = new HashSet<Item>();
+            Items = new HashSet<Item>();
         }
 
         [Key]
